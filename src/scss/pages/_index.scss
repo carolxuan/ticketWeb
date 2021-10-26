@@ -1,0 +1,121 @@
+.sticky-footer {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.addTicket-panel {
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 12px;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  max-width: 920px;
+  margin: 120px auto 100px;
+  padding: 60px 16px;
+}
+.addTicket-img {
+  img {
+    width: 360px;
+  }
+}
+
+.content {
+  margin-top: auto;
+  padding: 100px 0;
+  background-color: #eee;
+}
+
+.content-inner {
+  max-width: 1100px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.ticketCard-area {
+  @include Desktops() {
+    justify-content: space-between;
+  }
+  li {
+    width: 31.3333%;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 3px 6px #00000029;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 2px solid #dee2e6;
+    border-radius: 5px;
+    margin-bottom: 38px;
+    margin-right: 2%;
+    @include Desktops() {
+      width: 47.3333%;
+      margin-right: 0;
+    }
+    @include apple() {
+      width: 100%;
+      margin-bottom: 46px;
+    }
+  }
+}
+
+.ticketCard-img {
+  position: relative;
+  a {
+    display: block;
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+    height: 180px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
+    -o-object-position: center;
+    transition: linear .3s;
+    &:hover {
+      -webkit-transform: scale(1.15);
+      transform: scale(1.15);
+    }
+  }
+}
+
+.ticketCard-region,
+.ticketCard-rank {
+  position: absolute;
+  border-radius: 0 5px 5px 0px;
+  color: #fff;
+  text-align: center;
+}
+.ticketCard-region {
+  top: -13px;
+  left: 0;
+  font-size: 1.25rem;
+  background-color: #64c3bf;
+  padding: 12px 20px;
+}
+
+.ticketCard-rank {
+  bottom: -16px;
+  left: 0;
+  background-color: #00807e;
+  padding: 5px 8px;
+  min-width: 40px;
+}
+
+.ticketCard-content {
+  padding: 48px 16px 32px 16px;
+}
+
+.ticketCard-description {
+  min-height: 100px;
+}
+
+.ticketCard-name {
+  display: block;
+  color: #00807e;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #00807e;
+}
+
+.message {
+  color: red;
+}
